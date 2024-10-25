@@ -32,6 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.6
+  mysql1: ^0.20.0
 
 dev_dependencies:
 

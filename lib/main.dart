@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'models/mysql.dart';
 
-void main() {
-  runApp(LeisureTrips());
+void main() async {
+  await sql();
+  runApp(const LeisureTrips());
 }
 
 class LeisureTrips extends StatelessWidget {
@@ -10,7 +12,7 @@ class LeisureTrips extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(),
     );
