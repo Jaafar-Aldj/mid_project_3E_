@@ -1,7 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mid_project_3e/pages/screen/onboarding.dart';
+import 'package:mid_project_3e/binding/initial_binding.dart';
+import 'package:mid_project_3e/routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,12 +16,13 @@ class LeisureTrips extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialBinding: InitialBinding(),
+      getPages: routes,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const OnBoarding(),
     );
   }
 }
